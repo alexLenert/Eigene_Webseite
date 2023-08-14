@@ -6,6 +6,9 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    
+    
     <style>
 
       .container-fluid {
@@ -19,12 +22,26 @@
         color: red;
       }
 
+      .input_form {
+
+        position: absolute;
+        height: 300px; width: 200px;
+        left: 150px; top: 150px
+
+    }
+
+    .submit_button {
+
+        position: absolute;
+        left: 400px; top: 200px;
+    }
+
       #home_button {
 
         color: yellow;
       }
 
-      #Login_button {
+      #Login {
 
         color: lightgreen;
       }
@@ -33,9 +50,9 @@
 
         color: orchid;
       }
-      
 
       
+
 
 
 
@@ -44,7 +61,8 @@
 
     </style>
 
-   
+    
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -56,10 +74,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" id="home_button" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" id="home_button" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="Login_button" href="login.html">Login</a>
+                <a class="nav-link" id="Login" href="#">Login</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="ID" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,22 +101,23 @@
           </div>
         </div>
       </nav>
-      <div class="container">
-      <div class="row g-5 row-cols-xs-1 row-cols-sm2 row-cols-md-3">
-        
-            <div class="card">
-            <div class="card-body">
-              This is some text within a card body.
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              This is some text within a card body.
-            </div>
-
-          
-        </div>
+     
+    <div class="input_form">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
       </div>
+      <label for="inputPassword5" class="form-label">Password</label>
+      <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+      <div id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+      </div>
+      
     </div>
+    <div class="submit_button">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+
+
 </body>
 </html>
